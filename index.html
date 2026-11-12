@@ -243,6 +243,58 @@ html[data-theme="dark"] .mode .sun{display:block}
 html[data-theme="dark"] .mode .moon{display:none}
 .bar .right{display:flex;align-items:center;gap:1.2rem;min-width:0}
 
+
+/* ASSISTANT */
+.as-intro{max-width:36rem;color:var(--soft);border-top:3px solid var(--ink);padding-top:1rem;margin:0 auto}
+#assistant .wrap>h2{text-align:center}
+#assistant .as-card{margin-left:auto;margin-right:auto}
+#assistant .as-intro{text-align:center}
+#assistant .as-quick p{text-align:center}
+#assistant .as-chips{justify-content:center}
+.as-card{max-width:760px;margin-top:1.6rem;border:2px solid var(--ink);background:var(--card)}
+.as-head{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;background:#141414;color:#fff}
+.as-av{flex:0 0 auto;width:3rem;height:3rem;background:var(--red);color:#fff;display:grid;place-items:center;font-size:1.25rem}
+.as-who b{display:block;font-weight:800;font-size:1.1rem;line-height:1.2}
+.as-who span{font-size:.85rem;color:#cfccc5;display:inline-flex;align-items:center;gap:.4rem}
+.as-who span::before{content:'';width:.55rem;height:.55rem;border-radius:50%;background:#3bd16f}
+.as-open{margin-left:auto;font:700 .95rem 'Archivo',sans-serif;background:#fff;color:#141414;border:none;padding:.7rem 1.1rem;cursor:pointer}
+.as-open:hover{background:var(--red);color:#fff}
+.as-quick{padding:1rem 1.3rem 1.2rem}
+.as-quick p{font-size:.88rem;color:var(--soft);margin-bottom:.6rem}
+.as-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.as-chip{font:600 .85rem 'Archivo',sans-serif;border:1.5px solid var(--ink);background:transparent;color:var(--ink);padding:.45rem .8rem;border-radius:999px;cursor:pointer;text-align:left}
+.as-chip:hover{background:var(--ink);color:var(--paper)}
+/* fenêtre */
+.as-dlg{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:1rem}
+.as-dlg.on{display:flex}
+.as-win{width:min(560px,100%);height:min(720px,92svh);display:flex;flex-direction:column;background:var(--paper);border:2px solid var(--ink);overflow:hidden}
+.as-win .as-head{padding:.9rem 1rem}
+.as-x{margin-left:auto;font:700 .9rem 'Archivo',sans-serif;background:transparent;color:#fff;border:2px solid #fff;padding:.4rem .8rem;cursor:pointer}
+.as-x:hover{background:#fff;color:#141414}
+.as-log{flex:1 1 auto;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.7rem}
+.as-msg{max-width:86%;padding:.7rem .9rem;font-size:.95rem;line-height:1.5}
+.as-msg.bot{align-self:flex-start;background:var(--grey);border-left:3px solid var(--red)}
+.as-msg.me{align-self:flex-end;background:#141414;color:#fff}
+html[data-theme="dark"] .as-msg.me{background:#efece5;color:#141414}
+.as-msg a{color:var(--red);font-weight:700}
+.as-msg ul{margin:.3rem 0 0 1.1rem}
+.as-typing{display:inline-flex;gap:.3rem}
+.as-typing i{width:.45rem;height:.45rem;border-radius:50%;background:var(--soft);animation:as-dot 1s infinite}
+.as-typing i:nth-child(2){animation-delay:.15s}.as-typing i:nth-child(3){animation-delay:.3s}
+@keyframes as-dot{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.as-sugg{flex:0 0 auto;max-height:8.5rem;overflow-y:auto;padding:.7rem 1rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.45rem}
+.as-form{flex:0 0 auto;display:flex;gap:.5rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.as-form input{flex:1 1 auto;min-width:0;font:400 1rem 'Archivo',sans-serif;padding:.6rem .7rem;border:2px solid var(--ink);background:var(--paper);color:var(--ink)}
+.as-form button{font:700 .9rem 'Archivo',sans-serif;background:var(--ink);color:var(--paper);border:none;padding:0 1rem;cursor:pointer}
+.as-foot{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.7rem 1rem;background:var(--grey);font-size:.85rem}
+.as-foot a{flex:0 0 auto;background:var(--red);color:#fff;font-weight:700;text-decoration:none;padding:.55rem .9rem}
+@media(max-width:700px){
+  .as-head{flex-wrap:wrap}.as-card .as-open{margin-left:0;width:100%}
+  .as-dlg{padding:0}.as-win{width:100%;height:100svh;border:none}
+  .as-win .as-head{flex-wrap:nowrap}
+}
+@media (prefers-reduced-motion:reduce){.as-typing i{animation:none;opacity:.6}}
+
 /* VISIONNEUSE */
 .lb{position:fixed;inset:0;z-index:200;background:rgba(10,10,10,.95);display:none;align-items:center;justify-content:center;padding:3.5rem 1rem 5rem}
 .lb.on{display:flex}
@@ -288,7 +340,7 @@ html[data-theme="dark"] .mode .moon{display:none}
     <a class="me" href="#top">H. Y. Camara</a>
     <div class="right">
     <nav aria-label="Sections">
-      <a href="#profil">Profil</a><a href="#projets">Projets</a><a href="#parcours">Parcours</a><a href="#engagements">Engagements</a><a href="#competences">Compétences</a><a href="#certificats">Certificats</a><a href="#contact">Contact</a>
+      <a href="#profil">Profil</a><a href="#projets">Projets</a><a href="#parcours">Parcours</a><a href="#engagements">Engagements</a><a href="#competences">Compétences</a><a href="#certificats">Certificats</a><a href="#assistant">Assistant</a><a href="#contact">Contact</a>
     </nav>
     <button type="button" class="mode" id="mode" aria-label="Passer en mode sombre">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -453,6 +505,24 @@ html[data-theme="dark"] .mode .moon{display:none}
     </div>
   </section>
 
+  <section class="sec" id="assistant">
+    <div class="wrap">
+      <h2 class="cond">Discutez avec mon assistant</h2>
+      <p class="as-intro">Un assistant qui répond à vos questions sur mon parcours, mes projets et mes compétences.</p>
+      <div class="as-card">
+        <div class="as-head">
+          <div class="as-av cond" aria-hidden="true">HC</div>
+          <div class="as-who"><b>Assistant de Hamedy</b><span>En ligne, cliquez pour discuter</span></div>
+          <button type="button" class="as-open" id="as-open">Ouvrir le chat</button>
+        </div>
+        <div class="as-quick">
+          <p>Questions fréquentes des recruteurs :</p>
+          <div class="as-chips" id="as-quick"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="end" id="contact">
     <div class="wrap">
       <h2 class="cond">Parlons-en</h2>
@@ -462,6 +532,24 @@ html[data-theme="dark"] .mode .moon{display:none}
   </section>
 </main>
 <footer><div class="wrap">© 2026 Hamedy Yahya Camara, Strasbourg</div></footer>
+
+<div class="as-dlg" id="as-dlg" role="dialog" aria-modal="true" aria-labelledby="as-title">
+  <div class="as-win">
+    <div class="as-head">
+      <div class="as-av cond" aria-hidden="true">HC</div>
+      <div class="as-who"><b id="as-title">Assistant de Hamedy</b><span>En ligne, répond en quelques secondes</span></div>
+      <button type="button" class="as-x" id="as-x">Fermer</button>
+    </div>
+    <div class="as-log" id="as-log" aria-live="polite"></div>
+    <div class="as-sugg" id="as-sugg"></div>
+    <form class="as-form" id="as-form" autocomplete="off">
+      <label for="as-in" class="sr-only" style="position:absolute;left:-9999px">Votre question</label>
+      <input id="as-in" type="text" placeholder="Posez votre question, par exemple : Kubernetes" maxlength="200">
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="as-foot"><span>Une autre question ? Écrivez-moi, je réponds rapidement.</span><a href="mailto:hamedycamara85@gmail.com?subject=Question%20depuis%20votre%20portfolio">Écrire à Hamedy</a></div>
+  </div>
+</div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Captures du projet">
   <button type="button" class="x" id="lbx">Fermer</button>
@@ -614,6 +702,70 @@ document.querySelectorAll('.ct-coin').forEach(c => {
   c.addEventListener('keydown', e => { if ((e.key==='Enter'||e.key===' ') && e.target === c) { e.preventDefault(); t(); } });
 });
 document.querySelectorAll('[data-see]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); openList(M[+b.dataset.see].imgs, 0); }));
+
+
+/* Assistant */
+const QA = [
+ {q:"Présentation du profil", k:["presente","presenter","presentation","profil","resume","parcours"],
+  a:"Hamedy Yahya Camara est ingénieur Cloud et DevOps, diplômé d'un Master Expert Informatique à l'EPSI Paris (titre RNCP niveau 7). Il est aujourd'hui en master SYNVA à l'INSPÉ de l'Université de Strasbourg, pour concevoir des dispositifs d'apprentissage numériques, notamment en réalité virtuelle. Il vit à Strasbourg et cherche une alternance à partir de septembre 2027."},
+ {q:"Pourquoi le recruter en alternance ?", k:["pourquoi","recruter","atout","avantage","plus","choisir","embaucher"],
+  a:"Parce qu'il a un double profil rare :<ul><li>une base technique solide : Terraform, Ansible, Kubernetes et AWS, avec un pipeline d'infrastructure complet livré à 22 tâches sur 22 ;</li><li>de l'expérience en développement fullstack sur une application pour étudiants ;</li><li>un vrai intérêt pour la pédagogie : master SYNVA, jury de 9 projets étudiants, formation « Apprendre à apprendre » ;</li><li>l'habitude de piloter : il a encadré trois développeurs stagiaires.</li></ul>Il sait construire une plateforme et penser à ceux qui l'utilisent."},
+ {q:"Quand est-il disponible ?", k:["disponible","disponibilite","quand","date","septembre","2027","alternance","rythme","debut","commencer","contrat"],
+  a:"Il cherche une alternance à partir de septembre 2027, dans le cadre de son Master 2 SYNVA, qui se fait obligatoirement en alternance. Il est basé à Strasbourg. Le rythme entre l'entreprise et l'INSPÉ sera précisé avec la formation : il est ouvert à en discuter."},
+ {q:"Ses compétences Cloud et DevOps ?", k:["cloud","devops","competence","kubernetes","k8s","docker","terraform","ansible","aws","azure","gcp","ci","cd","gitlab","linux","technique","outil","infra","infrastructure","helm","packer"],
+  a:"Il travaille avec Docker et Kubernetes (K3s, k3d, Helm), Terraform, Ansible et Packer, sur AWS, Azure et GCP, avec GitLab CI/CD, Linux, VMware ESXi et pfSense. Il a suivi des formations certifiantes sur Terraform pour AWS et Azure, Ansible et l'Azure Well-Architected Framework. Ses projets sont visibles dans la <a href=\"#projets\">salle des projets</a>."},
+ {q:"Son lien avec la pédagogie et la réalité virtuelle ?", k:["pedagogie","pedagogique","vr","virtuelle","realite","augmentee","3d","synva","apprentissage","formation","enseigner","immersif","mooc","a-frame","aframe"],
+  a:"Avec le master SYNVA, il apprend à concevoir des applications d'apprentissage en réalité virtuelle, augmentée et 3D, avec l'ingénierie de la formation et l'ergonomie des interfaces. Ses projets en cours : une visite virtuelle de Strasbourg dans les années 1950 en casque VR (A-Frame), une enquête sur la motivation dans les MOOC, et un entretien sur l'IA avec un ingénieur pédagogique."},
+ {q:"Son projet phare ?", k:["projet","phare","pipeline","iac","odoo","k3s","meilleur","principal","realisation"],
+  a:"Un pipeline d'infrastructure complet sur AWS : une image machine créée avec Packer, le réseau et les serveurs avec Terraform, un cluster K3s configuré avec Ansible, puis l'ERP Odoo 17 déployé avec Helm et exposé en HTTPS. Résultat : 22 tâches livrées sur 22, pour 45 $ dépensés sur un budget de 100 $. <a href=\"#projets\">Voir le projet et ses captures</a>."},
+ {q:"A-t-il dirigé une équipe ?", k:["equipe","dirige","diriger","manager","management","encadre","encadrement","chef","leader","jira","agile","scrum","stagiaire","stagiaires","gere","gerer","pilote","piloter"],
+  a:"Oui. Comme chef de projet SI à l'EPSI Paris, au laboratoire MyDIL, il a encadré trois développeurs stagiaires, planifié et suivi leurs tâches dans Jira, et fait le lien avec le service informatique."},
+ {q:"Ses engagements ?", k:["engagement","benevole","benevolat","jury","linkee","linkedin","association","horizon"],
+  a:"Il a été membre du jury du Workshop National Bachelor 3 « Horizon 2080 » à l'EPSI Paris le 25 septembre 2026 : il a évalué 9 projets étudiants. Il est aussi bénévole chez Linkee depuis septembre 2025, pour des distributions alimentaires aux étudiants. <a href=\"#engagements\">Voir les badges</a>."},
+ {q:"Sa formation ?", k:["formation","diplome","etude","etudes","master","licence","ecole","universite","epsi","inspe","rncp"],
+  a:"<ul><li>Master Sciences de l'éducation et de la formation, parcours SYNVA, INSPÉ, Université de Strasbourg (depuis 2026)</li><li>Master Expert Informatique, Infrastructure Cloud et Informatique Décisionnelle, EPSI Paris (2024 à 2026), titre RNCP niveau 7</li><li>Licence professionnelle Systèmes d'Information, Université Amadou Hampâté Bâ, Dakar (2020 à 2023)</li></ul>"},
+ {q:"Quelles langues parle-t-il ?", hide:true, k:["langue","langues","anglais","francais","english","parle","parler","arabe","chinois","espagnol","allemand"],
+  a:"Il parle français couramment et a un niveau intermédiaire en anglais, suffisant pour la documentation technique."},
+ {q:"Comment le contacter ?", k:["contact","contacter","mail","email","joindre","telephone","linkedin","cv","ecrire"],
+  a:"Par mail à <a href=\"mailto:hamedycamara85@gmail.com\">hamedycamara85@gmail.com</a>, ou sur <a href=\"https://www.linkedin.com/in/hamedy-yahya-camara/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>. Son CV est disponible <a href=\"docs/CV_Hamedy_Camara.pdf\" target=\"_blank\" rel=\"noopener\">ici en PDF</a>."}
+];
+const asLog = document.getElementById('as-log'), asDlg = document.getElementById('as-dlg'), asIn = document.getElementById('as-in');
+let asStarted = false, asBack = null, asBusy = false;
+const chip = (i) => `<button type="button" class="as-chip" data-q="${i}">${QA[i].q}</button>`;
+document.getElementById('as-quick').innerHTML = [1,5,3].map(chip).join('');
+document.getElementById('as-sugg').innerHTML = QA.map((x,i)=>x.hide?'':chip(i)).join('');
+function asAdd(cls, html){ const d = document.createElement('div'); d.className = 'as-msg ' + cls; d.innerHTML = html; asLog.appendChild(d); asLog.scrollTop = asLog.scrollHeight; return d; }
+function asReply(html){
+  asBusy = true;
+  const t = asAdd('bot', '<span class="as-typing" aria-label="L\'assistant écrit"><i></i><i></i><i></i></span>');
+  setTimeout(() => { t.innerHTML = html; asLog.scrollTop = asLog.scrollHeight; asBusy = false; }, 650);
+}
+function asOpen(){
+  asBack = document.activeElement; asDlg.classList.add('on'); document.body.style.overflow = 'hidden';
+  if (!asStarted) { asStarted = true; asAdd('bot', "Bonjour ! Je suis l'assistant de Hamedy. Posez-moi vos questions sur son parcours, ses projets ou ses compétences, ou choisissez une question ci-dessous."); }
+  setTimeout(() => asIn.focus(), 50);
+}
+function asClose(){ asDlg.classList.remove('on'); document.body.style.overflow = ''; if (asBack) asBack.focus(); }
+function asAsk(i){ if (asBusy) return; asAdd('me', QA[i].q); asReply(QA[i].a); }
+const norm = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9\s-]/g,' ');
+function asFree(text){
+  const w = norm(text).split(/\s+/).filter(Boolean);
+  let best = -1, score = 0;
+  QA.forEach((x,i) => { const sc = x.k.reduce((n,k) => n + (w.some(t => t === k || (k.length > 3 && t.startsWith(k))) ? 1 : 0), 0); if (sc > score) { score = sc; best = i; } });
+  if (best >= 0) asReply(QA[best].a);
+  else asReply("Je n'ai pas de réponse précise à cette question. Choisissez une question ci-dessous, ou <a href=\"mailto:hamedycamara85@gmail.com?subject=Question%20depuis%20votre%20portfolio\">écrivez directement à Hamedy</a> : il vous répondra rapidement.");
+}
+document.getElementById('as-open').addEventListener('click', asOpen);
+document.getElementById('as-x').addEventListener('click', asClose);
+asDlg.addEventListener('click', e => { if (e.target === asDlg) asClose(); const l = e.target.closest('a[href^="#"]'); if (l) { asClose(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && asDlg.classList.contains('on')) asClose(); });
+document.querySelectorAll('.as-chip').forEach(b => b.addEventListener('click', () => {
+  const i = +b.dataset.q; if (!asDlg.classList.contains('on')) asOpen(); asAsk(i);
+}));
+document.getElementById('as-form').addEventListener('submit', e => {
+  e.preventDefault(); const v = asIn.value.trim(); if (!v || asBusy) return;
+  asAdd('me', v.replace(/&/g,'&amp;').replace(/</g,'&lt;')); asIn.value = ''; asFree(v);
+});
 
 /* Clair / sombre */
 const modeBtn = document.getElementById('mode');
