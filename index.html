@@ -670,6 +670,8 @@ document.querySelectorAll('.eg-pics button').forEach(p => p.addEventListener('cl
 /* Certificats */
 const CI = f => ({f:'img/certs/' + f[0] + '.webp', c:f[1]});
 const M = [
+  {f:'Enseigner', s:true, org:'FUN MOOC', nm:'Se former pour enseigner dans le supérieur (MESRE)', dt:'14 novembre 2026', imgs:[['enseigner','Badge de réussite, France Université Numérique']].map(CI),
+   links:[['Vérifier le badge','https://openbadgefactory.com/obv3/credentials/ca3a3d2d2094b2dc2afa889fbd50abae9c273077']]},
   {f:'Azure WAF', s:true, org:'Microsoft Learn', nm:'Azure Well-Architected Framework, 6 modules', dt:'13 et 14 mars 2026',
    imgs:[['waf-0','Présentation'],['waf-1','Fiabilité'],['waf-2','Sécurité'],['waf-3','Optimisation des coûts'],['waf-4','Excellence opérationnelle'],['waf-5','Efficacité des performances']].map(CI)},
   {f:'Azure', org:'Microsoft Learn', nm:"Notions de base d'Azure, 7 modules", dt:'13 et 14 mars 2026',
@@ -715,7 +717,7 @@ const QA = [
  {q:"Ses compétences Cloud et DevOps ?", k:["cloud","devops","competence","kubernetes","k8s","docker","terraform","ansible","aws","azure","gcp","ci","cd","gitlab","linux","technique","outil","infra","infrastructure","helm","packer"],
   a:"Il travaille avec Docker et Kubernetes (K3s, k3d, Helm), Terraform, Ansible et Packer, sur AWS, Azure et GCP, avec GitLab CI/CD, Linux, VMware ESXi et pfSense. Il a suivi des formations certifiantes sur Terraform pour AWS et Azure, Ansible et l'Azure Well-Architected Framework. Ses projets sont visibles dans la <a href=\"#projets\">salle des projets</a>."},
  {q:"Son lien avec la pédagogie et la réalité virtuelle ?", k:["pedagogie","pedagogique","vr","virtuelle","realite","augmentee","3d","synva","apprentissage","formation","enseigner","immersif","mooc","a-frame","aframe"],
-  a:"Avec le master SYNVA, il apprend à concevoir des applications d'apprentissage en réalité virtuelle, augmentée et 3D, avec l'ingénierie de la formation et l'ergonomie des interfaces. Ses projets en cours : une visite virtuelle de Strasbourg dans les années 1950 en casque VR (A-Frame), une enquête sur la motivation dans les MOOC, et un entretien sur l'IA avec un ingénieur pédagogique."},
+  a:"Avec le master SYNVA, il apprend à concevoir des applications d'apprentissage en réalité virtuelle, augmentée et 3D, avec l'ingénierie de la formation et l'ergonomie des interfaces. Ses projets en cours : une visite virtuelle de Strasbourg dans les années 1950 en casque VR (A-Frame), une enquête sur la motivation dans les MOOC, et un entretien sur l'IA avec un ingénieur pédagogique. Il a aussi obtenu en novembre 2026 le badge de réussite du MOOC « Se former pour enseigner dans le supérieur » (France Université Numérique) : pédagogie active, motivation, évaluation, approche par compétences, enseignement en ligne et IA générative."},
  {q:"Son projet phare ?", k:["projet","phare","pipeline","iac","odoo","k3s","meilleur","principal","realisation"],
   a:"Un pipeline d'infrastructure complet sur AWS : une image machine créée avec Packer, le réseau et les serveurs avec Terraform, un cluster K3s configuré avec Ansible, puis l'ERP Odoo 17 déployé avec Helm et exposé en HTTPS. Résultat : 22 tâches livrées sur 22, pour 45 $ dépensés sur un budget de 100 $. <a href=\"#projets\">Voir le projet et ses captures</a>."},
  {q:"A-t-il dirigé une équipe ?", k:["equipe","dirige","diriger","manager","management","encadre","encadrement","chef","leader","jira","agile","scrum","stagiaire","stagiaires","gere","gerer","pilote","piloter"],
