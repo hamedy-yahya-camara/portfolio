@@ -671,7 +671,7 @@ document.querySelectorAll('.eg-pics button').forEach(p => p.addEventListener('cl
 const CI = f => ({f:'img/certs/' + f[0] + '.webp', c:f[1]});
 const M = [
   {f:'Enseigner', s:true, org:'FUN MOOC', nm:'Se former pour enseigner dans le supérieur (MESRE)', dt:'14 novembre 2026', imgs:[['enseigner','Badge de réussite, France Université Numérique']].map(CI),
-   links:[['Vérifier le badge','https://openbadgefactory.com/obv3/credentials/ca3a3d2d2094b2dc2afa889fbd50abae9c273077']]},
+   links:[['Vérifier le badge officiel','https://openbadgefactory.com/obv3/credentials/ca3a3d2d2094b2dc2afa889fbd50abae9c273077']]},
   {f:'Azure WAF', s:true, org:'Microsoft Learn', nm:'Azure Well-Architected Framework, 6 modules', dt:'13 et 14 mars 2026',
    imgs:[['waf-0','Présentation'],['waf-1','Fiabilité'],['waf-2','Sécurité'],['waf-3','Optimisation des coûts'],['waf-4','Excellence opérationnelle'],['waf-5','Efficacité des performances']].map(CI)},
   {f:'Azure', org:'Microsoft Learn', nm:"Notions de base d'Azure, 7 modules", dt:'13 et 14 mars 2026',
@@ -694,7 +694,7 @@ document.getElementById('ct-wall').innerHTML = M.map((m,i) => `
     <div class="ct-coin" role="button" tabindex="0" aria-label="${esc(m.nm)}, toucher pour retourner"><div class="ct-inner">
       <div class="ct-face ct-front"><div class="big cond${m.s?' s':''}">${esc(m.f)}</div><div class="org">${esc(m.org)}</div></div>
       <div class="ct-face ct-back"><div class="nm">${esc(m.nm)}</div><div class="dt">${esc(m.dt)}</div>
-        <div class="acts">${m.imgs.length?`<button type="button" data-see="${i}">Voir ${m.imgs.length>1?'les '+m.imgs.length+' certificats':'le certificat'}</button>`:''}${(m.links||[]).map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join('')}</div></div>
+        <div class="acts">${(m.links||[]).map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join('')}${m.imgs.length?`<button type="button" data-see="${i}">Voir ${m.imgs.length>1?'les '+m.imgs.length+' certificats':'le certificat'}</button>`:''}</div></div>
     </div></div>
     <div class="ct-cap"><b>${esc(m.nm)}</b><span>${esc(m.org)}, ${esc(m.dt)}</span></div>
   </div>`).join('');
